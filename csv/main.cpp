@@ -18,7 +18,7 @@ int main(int argc, char **argv){
     }
     else
     {
-        cout << "RIP DANS TA PISSE" << endl;
+        cout << "RESTE DANS TA PISSE" << endl;
         return -1;
     }
 
@@ -26,6 +26,8 @@ int main(int argc, char **argv){
     cout << monCSVParser.header[1] << endl;
     cout << monCSVParser.header[2] << endl;
     cout << monCSVParser.header[3] << endl;
+    cout << "nombre de colonnes: " << monCSVParser.numberOfColumns << endl;
+    cout << "nombre de lignes: " << monCSVParser.numberOfRows << endl;
 
     return 0;
 }
