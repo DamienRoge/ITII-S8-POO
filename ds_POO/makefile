@@ -16,12 +16,10 @@ test :
 
 clean :
 	rm -f *.o
-	rm -f main
-	rm -f test-smart-wc
 
 cleaner :
 	rm -f *.o
-	rm -f main
+	rm -f smart-wc
 	rm -f test-smart-wc
 
 run : all
