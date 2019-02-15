@@ -62,3 +62,26 @@ bool CSVParser::initWithFile(string chemin_fichier) {
     mon_fichier.close();
     return true;
 }
+
+std::string CSVParser::getFilepath(){
+    return this->filepath;
+}
+
+int CSVParser::getNumberOfColumns(){
+    return this->numberOfColumns;
+}
+
+int CSVParser::getNumberofRows(){
+    return this->numberOfRows;
+}
+
+std::string *CSVParser::getHeader(){
+    string *p_header = (string*) malloc(sizeof(string) * 4);
+
+    p_header[0] = this->header[0];
+    p_header[1] = this->header[1];
+    p_header[2] = this->header[2];
+    p_header[3] = this->header[3];
+
+    return p_header;
+}
