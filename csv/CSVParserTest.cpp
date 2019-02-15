@@ -11,7 +11,21 @@
 using namespace std;
 
 
-TEST_CASE( "", "[]" ) {
+TEST_CASE( "CSVParser", "[]" ) {
+    SECTION("CSVParser"){
+        CSVParser monCSVParser;
+        monCSVParser.initWithFile("./sondage.csv");
 
+        REQUIRE(monCSVParser.getFilepath() == "./sondage.csv");
+        REQUIRE(monCSVParser.getNumberOfColumns() == 4);
+        REQUIRE(monCSVParser.getNumberOfColumns() == 20);
+        string *header = monCSVParser.getHeader();
+        REQUIRE(header[0] == "Prénoms");
+        REQUIRE(header[1] == "Numéros de téléphone");
+        REQUIRE(header[2] == "Réponses");
+        REQUIRE(header[3] == "Noms");
+
+
+    }
 
 }
