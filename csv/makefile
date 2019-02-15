@@ -1,8 +1,8 @@
 # Variables
 CXXFLAGS = -Wall -g -O0 -std=c++11
-SRC = CSVParser.cpp main.cpp
-SRC_TEST = CSVParser.cpp  CSVParserTest.cpp
-INC = CSVParser.hpp
+SRC = CSVParser.cpp main.cpp Person.cpp
+SRC_TEST = CSVParser.cpp  CSVParserTest.cpp Person.cpp PersonTest.cpp
+INC = CSVParser.hpp Person.hpp
 OBJ = $(SRC:.cpp=.o)
 
 default : all
