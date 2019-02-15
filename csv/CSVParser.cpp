@@ -29,7 +29,7 @@ bool CSVParser::initWithFile(string chemin_fichier) {
     this->header[2]="";
     this->header[3]="";
 
-    wchar_t le_char = NULL; // Character courant lu
+    wchar_t le_char; // Character courant lu
     int i = 0;
     mon_fichier.get(le_char);
 
@@ -58,7 +58,7 @@ bool CSVParser::initWithFile(string chemin_fichier) {
     while(mon_fichier.getline(line, 256)){
         this->numberOfRows++;
     }
-        
+    
     mon_fichier.close();
     return true;
 }
@@ -75,13 +75,12 @@ int CSVParser::getNumberofRows(){
     return this->numberOfRows;
 }
 
-std::string *CSVParser::getHeader(){
-    string *p_header = (string*) malloc(sizeof(string) * 4);
+std::string *CSVParser::getHeader(string* p_header){
 
     p_header[0] = this->header[0];
     p_header[1] = this->header[1];
     p_header[2] = this->header[2];
     p_header[3] = this->header[3];
 
-    return p_header;
+    return ((string*)p_header);
 }
