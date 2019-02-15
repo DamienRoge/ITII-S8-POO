@@ -20,7 +20,7 @@ struct CSVParser {
     std::string getFilepath();
     int getNumberOfColumns();
     int getNumberofRows();
-    std::string *getHeader();
+    std::string *getHeader(std::string*);
 
     /** -- Fonctions -- **/
     bool initWithFile(std::string path);
