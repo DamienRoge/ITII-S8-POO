@@ -22,16 +22,5 @@ int main(int argc, char **argv){
         return -1;
     }
 
-    string *leHeader = monCSVParser.getHeader();
-
-    
-    cout << "headers:" << endl << leHeader[0] << endl;
-    cout << leHeader[1] << endl;
-    cout << leHeader[2] << endl;
-    cout << leHeader[3] << endl;
-    cout << "nombre de colonnes: " << monCSVParser.getNumberOfColumns() << endl;
-    cout << "nombre de lignes: " << monCSVParser.getNumberofRows() << endl;
-    
-    free(leHeader);
     return 0;
 }
