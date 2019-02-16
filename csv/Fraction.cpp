@@ -32,3 +32,18 @@ using namespace std;
         toDisplay + to_string(this->numerateur) + "/" + to_string(this->denominateur);
         return toDisplay;
     }
+
+    /** -- Operateurs -- */
+
+    void Fraction::operator+(int leEntier){
+        
+    }
+    void Fraction::operator+(Fraction laFraction){
+
+    }
+    bool Fraction::operator<(Fraction laFraction){
+
+    }
+    bool Fraction::operator>(Fraction laFraction){
+
+    }
